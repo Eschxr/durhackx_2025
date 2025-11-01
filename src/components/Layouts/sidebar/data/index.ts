@@ -41,6 +41,12 @@ export const NAV_DATA = [
         ],
       },
       {
+        title: "Test",
+        url: "/test",
+        icon: Icons.Table,
+        items: [],
+      },
+      {
         title: "Tables",
         url: "/tables",
         icon: Icons.Table,
