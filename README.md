@@ -1,2 +1,3 @@
-# durhackx_2025
-durhack (2025) project
+# Durhack X 2025
+
+Our project for Durhack 2025.
