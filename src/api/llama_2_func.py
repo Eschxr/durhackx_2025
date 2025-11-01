@@ -1,6 +1,11 @@
 import requests
 import json
 
+# function used for testing the flask + nextjs connection w/o running the ai
+def test_func(input):
+    res = "You entered: " + str(input)
+    return res
+
 def llama2_mes(mes):
     # Set up the base URL for the local Ollama API
     url = "http://localhost:11434/api/chat"

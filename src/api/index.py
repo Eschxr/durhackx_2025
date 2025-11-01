@@ -1,4 +1,4 @@
-import llama2_func, mistral_fuc, TaskAI
+import llama_2_func, mistral_fuc, TaskAI
 
 mes = input("Please enter the task: ")
 # I am going to do a chemistry report demostration tomorrow. I need to write the transcript and make a ppt.
