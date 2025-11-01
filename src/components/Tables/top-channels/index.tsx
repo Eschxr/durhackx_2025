@@ -28,11 +28,8 @@ export async function TopChannels({ className }: { className?: string }) {
       <Table>
         <TableHeader>
           <TableRow className="border-none uppercase [&>th]:text-center">
-            <TableHead className="min-w-[120px] !text-left">Source</TableHead>
-            <TableHead>Visitors</TableHead>
-            <TableHead className="!text-right">Revenues</TableHead>
-            <TableHead>Sales</TableHead>
-            <TableHead>Conversion</TableHead>
+            <TableHead className="min-w-[120px] !text-left">Models</TableHead>
+            <TableHead>Description</TableHead>
           </TableRow>
         </TableHeader>
 
@@ -43,26 +40,11 @@ export async function TopChannels({ className }: { className?: string }) {
               key={channel.name + i}
             >
               <TableCell className="flex min-w-fit items-center gap-3">
-                <Image
-                  src={channel.logo}
-                  className="size-8 rounded-full object-cover"
-                  width={40}
-                  height={40}
-                  alt={channel.name + " Logo"}
-                  role="presentation"
-                />
                 <div className="">{channel.name}</div>
               </TableCell>
 
-              <TableCell>{compactFormat(channel.visitors)}</TableCell>
+              <TableCell >{channel.Description}</TableCell>
 
-              <TableCell className="!text-right text-green-light-1">
-                ${standardFormat(channel.revenues)}
-              </TableCell>
-
-              <TableCell>{channel.sales}</TableCell>
-
-              <TableCell>{channel.conversion}%</TableCell>
             </TableRow>
           ))}
         </TableBody>
