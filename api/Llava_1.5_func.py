@@ -1,14 +1,14 @@
 import requests
 import json
 
-def Ollama_mes(messages):
+def Llava_15_mes(mes):
     # Set up the base URL for the local Ollama API
     url = "http://localhost:11434/api/chat"
 
     # Define the payload (your input prompt)
     payload = {
-        "model": "llama2",  # Replace with the model name you're using
-        "messages": [{"role": "user", "content": messages}]
+        "model": "Llava_15",  # Replace with the model name you're using
+        "messages": [{"role": "user", "content": mes}]
     }
 
     # Send the HTTP POST request with streaming enabled
@@ -16,7 +16,7 @@ def Ollama_mes(messages):
 
     # Check the response status
     if response.status_code == 200:
-        print("Streaming response from Ollama:")
+        print("Streaming response from Llava_15:")
         for line in response.iter_lines(decode_unicode=True):
             if line:
                 try:
@@ -31,3 +31,5 @@ def Ollama_mes(messages):
     else:
         print(f"Error: {response.status_code}")
         print(response.text)
+
+#Llava_15_mes("hello")
