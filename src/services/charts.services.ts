@@ -1,5 +1,5 @@
 export async function getDevicesUsedData(
-  timeFrame?: "monthly" | "yearly" | (string & {}),
+  timeFrame?: "Daily" | "Monthly" | (string & {}),
 ) {
   // Fake delay
   await new Promise((resolve) => setTimeout(resolve, 1000));
@@ -27,7 +27,7 @@ export async function getDevicesUsedData(
     },
   ];
 
-  if (timeFrame === "yearly") {
+  if (timeFrame === "Weekly") {
     data[0].amount = 19500;
     data[1].amount = 3000;
     data[2].amount = 6000;
@@ -38,12 +38,12 @@ export async function getDevicesUsedData(
 }
 
 export async function getPaymentsOverviewData(
-  timeFrame?: "monthly" | "yearly" | (string & {}),
+  timeFrame?: "Daily" | "Weely" | (string & {}),
 ) {
   // Fake delay
   await new Promise((resolve) => setTimeout(resolve, 1000));
 
-  if (timeFrame === "yearly") {
+  if (timeFrame === "Weekly") {
     return {
       received: [
         { x: 2020, y: 450 },
