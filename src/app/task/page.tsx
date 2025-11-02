@@ -14,9 +14,9 @@ export default async function Home({ searchParams }: PropsType) {
   const extractTimeFrame = createTimeFrameExtractor(selected_time_frame);
 
   return (
-    <ShowcaseSection title="AI Chat Test" className="space-y-6 !p-6.5">
+    <ShowcaseSection title="Task Manager" className="space-y-6 !p-6.5">
         <TextAreaGroup
-            label="AI Input Area"
+            label="Please enter your task requirements"
             placeholder="Please enter your input here"
         />
         <Button label="Submit" variant="green" shape="rounded" />

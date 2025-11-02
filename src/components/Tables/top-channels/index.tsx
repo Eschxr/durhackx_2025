@@ -6,9 +6,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { compactFormat, standardFormat } from "@/lib/format-number";
 import { cn } from "@/lib/utils";
-import Image from "next/image";
 import { getTopChannels } from "../fetch";
 
 export async function TopChannels({ className }: { className?: string }) {
@@ -22,13 +20,13 @@ export async function TopChannels({ className }: { className?: string }) {
       )}
     >
       <h2 className="mb-4 text-body-2xlg font-bold text-dark dark:text-white">
-        Top Channels
+        Model Responses
       </h2>
 
       <Table>
         <TableHeader>
           <TableRow className="border-none uppercase [&>th]:text-center">
-            <TableHead className="min-w-[120px] !text-left">Models</TableHead>
+            <TableHead className="min-w-[120px] !text-left">Model Name</TableHead>
             <TableHead>Description</TableHead>
           </TableRow>
         </TableHeader>

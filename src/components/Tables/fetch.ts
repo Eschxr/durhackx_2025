@@ -78,8 +78,24 @@ export async function getTopChannels() {
 
   return [
     {
-      name: "Llama",
-      Description: "llama"
+      name: "Llama 2",
+      Description: "Description"
+    },
+    {
+      name: "Llava:Latest",
+      Description: "Description"
+    },
+    {
+      name: "Mistral",
+      Description: "Description"
+    },
+    {
+      name: "Orca 2",
+      Description: "Description"
+    },
+    {
+      name: "Qwen 2",
+      Description: "Description"
     },
   
   ];
