@@ -9,7 +9,7 @@ type PropsType = {
 };
 
 export async function UsedDevices({
-  timeFrame = "monthly",
+  timeFrame = "Weekly",
   className,
 }: PropsType) {
   const data = await getDevicesUsedData(timeFrame);
@@ -23,7 +23,7 @@ export async function UsedDevices({
     >
       <div className="flex flex-wrap items-center justify-between gap-4">
         <h2 className="text-body-2xlg font-bold text-dark dark:text-white">
-          Used Devices
+          Working Flow
         </h2>
 
         <PeriodPicker defaultValue={timeFrame} sectionKey="used_devices" />

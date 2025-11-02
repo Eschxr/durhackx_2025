@@ -11,7 +11,7 @@ import { TextAreaGroup } from "@/components/FormElements/InputGroup/text-area";
 import { Button } from "@/components/ui-elements/button";
 
 export const metadata: Metadata = {
-  title: "Tables",
+  title: "Discussion Board",
 };
 
 type PropsType = {
@@ -26,7 +26,7 @@ export default async function TablesPage({ searchParams }: PropsType) {
 
   return (
     <>
-      <Breadcrumb pageName="Discussion Box" />
+      <Breadcrumb pageName="Discussion Board" />
 
       <div className="space-y-10">
         {/* AI Chat Section */}
