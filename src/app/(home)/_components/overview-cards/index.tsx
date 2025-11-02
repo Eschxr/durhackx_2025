@@ -32,7 +32,7 @@ export async function OverviewCardsGroup() {
   return (
     <div className="grid gap-4 sm:grid-cols-2 sm:gap-6 xl:grid-cols-4 2xl:gap-7.5">
       <OverviewCard
-        label="Llama 2"
+        label="Llama"
         data={{value: llamaResponse}}
         Icon={icons.Views}
       />

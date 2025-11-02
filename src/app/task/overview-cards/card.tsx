@@ -43,9 +43,9 @@ export function OverviewCard({ label, data, Icon }: PropsType) {
 
         <Dropdown isOpen={isOpen} setIsOpen={setIsOpen}>
         <DropdownTrigger
-          className="flex items-center gap-2.5 rounded-[7px] px-5.5 py-[13px] font-medium text-white"
+          className="flex items-center gap-2.5 rounded-[7px] px-5.5 py-[13px] font-medium text-grey-900"
         >
-          <span>Dropdown Button</span>
+          <span>Select</span>
           <ChevronUpIcon className="size-5 rotate-180 transition-transform data-[state=open]:rotate-0" />
         </DropdownTrigger>
  
