@@ -40,6 +40,12 @@ def getQwen():
     data = Qwen_2_func.Qwen_2_mes(mes)
     return jsonify({'data': data})
 
+@app.route('/api/task', methods = ['GET'])
+def getTask():
+    mes = request.args.get('input')
+    data = TaskAI.TaskAI(mes)
+    return jsonify({'data': data})
+
 
 # driver function
 if __name__ == '__main__':
