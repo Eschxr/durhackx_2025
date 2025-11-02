@@ -1,5 +1,5 @@
 from flask import Flask, jsonify, request
-import llama_2_func #, mistral_fuc, TaskAI, Orca_2_func, Qwen_2_func, Llava_15_func
+import llama_2_func , mistral_func, TaskAI, qrca_2_func, Qwen_2_func, llava_func
 
 
 app = Flask(__name__)
@@ -16,29 +16,29 @@ def getLlama():
     # data = TaskAI.TaskAI(input)
     return jsonify({'data': data})
 
-# @app.route('/api/llava', methods = ['GET'])
-# def getLlava():
-#     mes = "Lorem ipsum"
-#     data = Llava_15_func.Llava_15_mes(mes)
-#     return jsonify({'data': data})
+@app.route('/api/llava', methods = ['GET'])
+def getLlava():
+    mes = request.args.get('input')
+    data = llava_func.Llava_mes(mes)
+    return jsonify({'data': data})
 
-# @app.route('/api/mistral', methods = ['GET'])
-# def getMistral():
-#     mes = "Lorem ipsum"
-#     data = mistral_fuc.mistral_mes(mes)
-#     return jsonify({'data': data})
+@app.route('/api/mistral', methods = ['GET'])
+def getMistral():
+    mes = request.args.get('input')
+    data = mistral_func.mistral_mes(mes)
+    return jsonify({'data': data})
 
-# @app.route('/api/orca', methods = ['GET'])
-# def getOrca():
-#     mes = "Lorem ipsum"
-#     data = mistral_fuc.mistral_mes(mes)
-#     return jsonify({'data': data})
+@app.route('/api/orca', methods = ['GET'])
+def getOrca():
+    mes = request.args.get('input')
+    data = qrca_2_func.Orca_2_mes(mes)
+    return jsonify({'data': data})
 
-# @app.route('/api/qwen', methods = ['GET'])
-# def getQwen():
-#     mes = "Lorem ipsum"
-#     data = Qwen_2_func.qwen_mes(mes)
-#     return jsonify({'data': data})
+@app.route('/api/qwen', methods = ['GET'])
+def getQwen():
+    mes = request.args.get('input')
+    data = Qwen_2_func.Qwen_2_mes(mes)
+    return jsonify({'data': data})
 
 
 # driver function

@@ -35,7 +35,12 @@ export default async function TablesPage({ searchParams }: PropsType) {
             label="AI Input Area"
             placeholder="Please enter your input here"
           />
-          <Button label="Submit" variant="green" shape="rounded" />
+          <button
+            className="rounded-lg bg-primary px-6 py-[7px] font-medium text-gray-2 hover:bg-opacity-90"
+            type="submit"
+          >
+            Submit
+        </button>
         </ShowcaseSection>
         {/* Table Section */}
         <Suspense>
