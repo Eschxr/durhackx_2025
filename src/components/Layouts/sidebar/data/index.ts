@@ -39,7 +39,7 @@ export const NAV_DATA = [
         items: [],
       },
       {
-        title: "Disucssion Board",
+        title: "Discussion Board",
         url: "/tables",
         icon: Icons.Table,
         items: [],
