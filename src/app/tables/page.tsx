@@ -56,8 +56,10 @@ export default function TablesPage({ searchParams }: PropsType) {
         // setLoading(false);
       }
       try {
+        let llavapayload = "Hi, I asked the Llama AI model about: "
+        llavapayload = llavapayload.concat(input, "it responded with: ", llamaresponse, ". Could you tell me about the same topic and elaborate on the previous AI's response if applicable? Be sure to consider the constraints given in the original input prompt.")
         const res = await fetch(
-          `http://localhost:3000/api/llava?input=${encodeURIComponent(input)}`
+          `http://localhost:3000/api/llava?input=${encodeURIComponent(llavapayload)}`
         );
         const data = await res.json();
         setLlavaResponse(data.data || "No response from AI.");
@@ -68,8 +70,10 @@ export default function TablesPage({ searchParams }: PropsType) {
         // setLoading(false);
       }
       try {
+        let mistralpayload = "Hi, I asked the Llama AI model about: "
+        mistralpayload = mistralpayload.concat(input, "it responded with: ", llamaresponse, ". I then asked the Llava AI model to respond to the same topic and analyze Llama's response, and it responded with: ", llavaresponse, ". Could you tell me about the same topic and engage in discussion with the previous AI models? Be sure to consider the constraints given in the original input prompt.")
         const res = await fetch(
-          `http://localhost:3000/api/mistral?input=${encodeURIComponent(input)}`
+          `http://localhost:3000/api/mistral?input=${encodeURIComponent(mistralpayload)}`
         );
         const data = await res.json();
         setMistralResponse(data.data || "No response from AI.");
@@ -80,8 +84,24 @@ export default function TablesPage({ searchParams }: PropsType) {
         // setLoading(false);
       }
       try {
+        let newllamapayload = "I originally asked you about: "
+        newllamapayload = newllamapayload.concat(input, ". Here is what Llava had to say about your response: ", llavaresponse, ". Here is what mistral had to say about both of your responses, is there anything you would like to add?")
         const res = await fetch(
-          `http://localhost:3000/api/orca?input=${encodeURIComponent(input)}`
+          `http://localhost:3000/api/llama?input=${encodeURIComponent(newllamapayload)}`
+        );
+        const data = await res.json();
+        setLlamaResponse(data.data || "No response from AI.");
+      } catch (err) {
+        console.error(err);
+        setLlamaResponse("Error connecting to backend.");
+      } finally {
+        // setLoading(false);
+      }
+      try {
+        let orcapayload = "Hi, I asked mistral AI to discuss Llama AI and Llava AI's responses to the following topic: "
+        orcapayload = orcapayload.concat(input, ". Here is what mistral had to say: ", mistralresponse, ". Respond to the input prompt and discuss the response with mistral.")
+        const res = await fetch(
+          `http://localhost:3000/api/orca?input=${encodeURIComponent(orcapayload)}`
         );
         const data = await res.json();
         setOrcaResponse(data.data || "No response from AI.");
@@ -92,8 +112,10 @@ export default function TablesPage({ searchParams }: PropsType) {
         // setLoading(false);
       }
       try {
+        let qwenpayload = "Hi, I asked the Orca AI model about: "
+        qwenpayload = qwenpayload.concat(input, " and asked it to discuss mistral AI's response to the same topic. It responded with: ", orcaresponse, ". Please respond to the original prompt, then engage in discussion with the previous AI's response. Be sure to consider the constraints given in the original input prompt.")
         const res = await fetch(
-          `http://localhost:3000/api/qwen?input=${encodeURIComponent(input)}`
+          `http://localhost:3000/api/qwen?input=${encodeURIComponent(qwenpayload)}`
         );
         const data = await res.json();
         setQwenResponse(data.data || "No response from AI.");
