@@ -1,13 +1,13 @@
 import requests
 import json
 
-def Qwen_2_mes(mes):
+def mistral_mes(mes):
     # Set up the base URL for the local Ollama API
     url = "http://localhost:11434/api/chat"
 
     # Define the payload (your input prompt)
     payload = {
-        "model": "qwen2.5",  # Replace with the model name you're using
+        "model": "mistral",  # Replace with the model name you're using
         "messages": [{"role": "user", "content": mes}]
     }
 
@@ -16,7 +16,7 @@ def Qwen_2_mes(mes):
 
     # Check the response status
     if response.status_code == 200:
-        print("Streaming response from qwen 2:")
+        print("Streaming response from mistral:")
         res = ""
         for line in response.iter_lines(decode_unicode=True):
             if line:
@@ -37,4 +37,4 @@ def Qwen_2_mes(mes):
         print(response.text)
         return 0
 
-print(Qwen_2_mes("hello"))
+print(mistral_mes("hello"))

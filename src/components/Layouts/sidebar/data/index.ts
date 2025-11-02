@@ -67,6 +67,12 @@ export const NAV_DATA = [
           },
         ],
       },
+      {
+        title: "Task",
+        url: "/task",
+        icon: Icons.Table,
+        items: [],
+      },
     ],
   },
   {

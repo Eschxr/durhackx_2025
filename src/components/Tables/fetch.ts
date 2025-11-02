@@ -78,44 +78,25 @@ export async function getTopChannels() {
 
   return [
     {
-      name: "Google",
-      visitors: 3456,
-      revenues: 4220,
-      sales: 3456,
-      conversion: 2.59,
-      logo: logos.google,
+      name: "Llama 2",
+      Description: "Description"
     },
     {
-      name: "X.com",
-      visitors: 3456,
-      revenues: 4220,
-      sales: 3456,
-      conversion: 2.59,
-      logo: logos.x,
+      name: "Llava:Latest",
+      Description: "Description"
     },
     {
-      name: "Github",
-      visitors: 3456,
-      revenues: 4220,
-      sales: 3456,
-      conversion: 2.59,
-      logo: logos.github,
+      name: "Mistral",
+      Description: "Description"
     },
     {
-      name: "Vimeo",
-      visitors: 3456,
-      revenues: 4220,
-      sales: 3456,
-      conversion: 2.59,
-      logo: logos.vimeo,
+      name: "Orca 2",
+      Description: "Description"
     },
     {
-      name: "Facebook",
-      visitors: 3456,
-      revenues: 4220,
-      sales: 3456,
-      conversion: 2.59,
-      logo: logos.facebook,
+      name: "Qwen 2",
+      Description: "Description"
     },
+  
   ];
 }
