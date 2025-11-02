@@ -162,9 +162,9 @@ export default function TablesPage({ searchParams }: PropsType) {
         </div>
         </ShowcaseSection>
         {/* Table Section */}
-        <Suspense>
+        {/* <Suspense>
           <TopChannels />
-        </Suspense>
+        </Suspense> */}
       </div>
     </>
   );

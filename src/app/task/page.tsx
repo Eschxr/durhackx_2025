@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import { ShowcaseSection } from "@/components/Layouts/showcase-section";
+import { OverviewCard } from "./overview-cards/card"
+import * as icons from "@/app/(home)/_components/overview-cards/icons";
 
 export default function TaskManagerPage() {
   const [input, setInput] = useState("");
@@ -59,6 +61,38 @@ export default function TaskManagerPage() {
           {response || "Your response will appear here."}
         </p>
       </div>
+
+      <div className="grid gap-4 sm:grid-cols-2 sm:gap-6 xl:grid-cols-4 2xl:gap-7.5">
+            <OverviewCard
+              label="Llama 2"
+              data={{value: "Please select the number of agents needed"}}
+              Icon={icons.Views}
+            />
+      
+            <OverviewCard
+              label="Llava"
+              data={{value: "Please select the number of agents needed"}}
+              Icon={icons.Profit}
+            />
+      
+            <OverviewCard
+              label="Mistral"
+              data={{value: "Please select the number of agents needed"}}
+              Icon={icons.Product}
+            />
+      
+            <OverviewCard
+              label="Orca"
+              data={{value: "Please select the number of agents needed"}}
+              Icon={icons.Users}
+            />
+      
+            <OverviewCard
+              label="Qwen"
+              data={{value: "Please select the number of agents needed"}}
+              Icon={icons.Users}
+            />
+          </div>
     </ShowcaseSection>
   );
 }
