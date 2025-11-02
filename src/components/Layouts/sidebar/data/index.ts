@@ -9,7 +9,7 @@ export const NAV_DATA = [
         icon: Icons.HomeIcon,
         items: [
           {
-            title: "I/We",
+            title: "Project 1: Chemistry Discussion",
             url: "/",
           },
         ],
