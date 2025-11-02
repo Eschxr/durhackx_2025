@@ -25,7 +25,7 @@ export async function OverviewCardsGroup() {
   let llamaResponse = getRequest("Please send a greeting and remind me to go to work. Try and be creative in your message if possible, but keep things formal. Send just the greeting itself in one line only please", "llama")
   let llavaResponse = getRequest("Imagine I've just overslept and am about to miss an important meeting, wake me up with only one line. Send only that single line.", "llava")
   let mistralResponse = getRequest("Remind me to complete a powerpoint presentation for my chemistry course by any date of your choice in december, use only one line and send only that single line.", "mistral")
-  let orcaResponse = getRequest("Remind me that I have a cybersecurity coursework due on the 6th of November, send one line and one line only.", "orca")
+  let orcaResponse = getRequest("Remind me that I have a cybersecurity coursework due on the 6th of November, do it in one line please. Do not include any other text in your response other than the one line to remind me for my coursework.", "orca")
   let qwenResponse = getRequest("Remind me of the most important task to do today. It is up to you what task I should have, as long as it is reasonable for a chemistry university student. Use one line and one line only.", "qwen")
 
 
