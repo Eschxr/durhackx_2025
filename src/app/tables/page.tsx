@@ -179,7 +179,7 @@ export default function TablesPage({ searchParams }: PropsType) {
         <div className="mt-6 p-4 border rounded-lg bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100">
         <h4 className="font-semibold mb-2">Qwen Response:</h4>
         <p className="whitespace-pre-wrap">
-          {qwenresponse || "Your response from Llama will appear here."}
+          {qwenresponse || "Your response from Qwen will appear here."}
         </p>
         </div>
         </ShowcaseSection>
