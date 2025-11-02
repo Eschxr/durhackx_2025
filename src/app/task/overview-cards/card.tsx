@@ -1,18 +1,18 @@
 // import { ArrowDownIcon, ArrowUpIcon } from "@/assets/icons";
 // import { cn } from "@/lib/utils";
-// 'use client';
+'use client';
 import type { JSX, SVGProps } from "react";
 
-// import { ChevronUpIcon } from "@/assets/icons";
-// import {
-//   Dropdown,
-//   DropdownContent,
-//   DropdownTrigger,
-// } from "@/components/ui/dropdown";
-// import Link from "next/link";
-// import { useState } from "react";
+import { ChevronUpIcon } from "@/assets/icons";
+import {
+  Dropdown,
+  DropdownContent,
+  DropdownTrigger,
+} from "@/components/ui/dropdown";
+import Link from "next/link";
+import { useState } from "react";
  
-// const ITEMS = ["1", "2", "3", "4"];
+const ITEMS = ["1", "2", "3", "4"];
 
 type PropsType = {
   label: string;
@@ -24,7 +24,7 @@ type PropsType = {
 
 export function OverviewCard({ label, data, Icon }: PropsType) {
 
-  // const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className="rounded-[10px] bg-white p-6 shadow-1 dark:bg-gray-dark">
@@ -40,6 +40,34 @@ export function OverviewCard({ label, data, Icon }: PropsType) {
           </dt>
 
         </dl>
+
+        <Dropdown isOpen={isOpen} setIsOpen={setIsOpen}>
+        <DropdownTrigger
+          className="flex items-center gap-2.5 rounded-[7px] px-5.5 py-[13px] font-medium text-white"
+        >
+          <span>Dropdown Button</span>
+          <ChevronUpIcon className="size-5 rotate-180 transition-transform data-[state=open]:rotate-0" />
+        </DropdownTrigger>
+ 
+        <DropdownContent
+          align="start"
+          className="mt-2 w-full max-w-[200px] rounded-[7px] py-3 shadow-card-4"
+        >
+          <ul className="flex flex-col">
+            {ITEMS.map((item) => (
+              <li key={item}>
+                <Link
+                  href="#"
+                  onClick={() => setIsOpen(false)}
+                  className="flex px-5 py-[7px] font-medium"
+                >
+                  {item}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </DropdownContent>
+      </Dropdown>
 
         {/* <dl
           className={cn(
