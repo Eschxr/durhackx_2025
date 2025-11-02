@@ -19,11 +19,11 @@ Then, install the required AI models, which you do with:
 `ollama pull {name_of_AI}`
 
 The models used in this software are: 
-* Llama 2
-* Llava Latest
-* Mistral
-* Orca 2
-* Qwen 2.5
+* Llama 2 (llama2)
+* Llava Latest (llava:latest)
+* Mistral (mistral)
+* Orca 2 (orca2)
+* Qwen 2.5 (qwen2.5)
 
 To run the software, first navigate to the `/src/api` folder and run:
 
