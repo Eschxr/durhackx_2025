@@ -15,7 +15,7 @@ export default function TaskManagerPage() {
 
     try {
       const res = await fetch(
-        `http://127.0.0.1:5000/api/task?input=${encodeURIComponent(input)}`
+        `http://localhost:3000/api/task?input=${encodeURIComponent(input)}`
       );
       const data = await res.json();
       setResponse(data.data || "No response from AI.");
