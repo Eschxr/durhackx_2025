@@ -30,7 +30,7 @@ export default function TaskManagerPage() {
   return (
     <ShowcaseSection title="Task Manager" className="space-y-6 !p-6.5">
       <label className="block text-gray-800 dark:text-gray-200 font-medium mb-2">
-        Please enter your task requirements
+        Please enter your task requirements, our A.I. model will respond with the recommended number of A.I. agents suitable for your given task.
       </label>
 
       <textarea
