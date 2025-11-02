@@ -25,13 +25,13 @@ The models used in this software are:
 * Orca 2
 * Qwen 2.5
 
-To run the software, first navigate to the `/src/api` folder and run:
+To run the developer deployment environment, first navigate to the `/src/api` folder and run:
 
-`flask run`
+`flask run --debug`
 
 Then, return to the main folder and run:
 
-`npm run`
+`npm run dev`
 
 The app should now be running on `localhost:3000`
 
