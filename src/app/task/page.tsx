@@ -29,12 +29,14 @@ export default function TaskManagerPage() {
 
   return (
     <ShowcaseSection title="Task Manager" className="space-y-6 !p-6.5">
-      <label className="block text-gray-200 font-medium mb-2">
+      <label className="block text-gray-800 dark:text-gray-200 font-medium mb-2">
         Please enter your task requirements
       </label>
 
       <textarea
-        className="w-full h-40 p-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-gray-900 text-gray-100 resize-none focus:outline-none focus:ring-2 focus:ring-green-500"
+        className="w-full h-40 p-3 rounded-lg border border-gray-300 dark:border-gray-600 
+                   bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 
+                   resize-none focus:outline-none focus:ring-2 focus:ring-green-500"
         placeholder="Please enter your input here"
         value={input}
         onChange={(e) => setInput(e.target.value)}
@@ -43,16 +45,15 @@ export default function TaskManagerPage() {
       <button
         onClick={handleSubmit}
         disabled={loading}
-        className={`px-5 py-2.5 rounded-md font-semibold text-white transition ${
-          loading
-            ? "bg-green-400 cursor-not-allowed"
-            : "bg-green-600 hover:bg-green-700"
-        }`}
+        className={`px-5 py-2.5 rounded-md font-semibold text-white transition 
+                   ${loading
+                     ? "bg-green-400 cursor-not-allowed"
+                     : "bg-green-600 hover:bg-green-700"}`}
       >
         {loading ? "Processing..." : "Submit"}
       </button>
 
-      <div className="mt-6 p-4 border rounded-lg bg-gray-50 dark:bg-gray-800 text-gray-800 dark:text-gray-100">
+      <div className="mt-6 p-4 border rounded-lg bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100">
         <h4 className="font-semibold mb-2">AI Response:</h4>
         <p className="whitespace-pre-wrap">
           {response || "Your response will appear here."}
