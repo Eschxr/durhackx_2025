@@ -13,10 +13,12 @@ export async function OverviewCardsGroup() {
       let sl: string = '/?input=';
       payload = payload.concat(model, sl, input);
       const response = await axios.get(payload);
-      console.log(response.data.data)
+      console.log(response.data.data);
       return response.data.data;
     } catch (error) {
+      model = model.concat(" is currently offline, please try again later.");
       console.error(error);
+      return model
     }
   }
 
@@ -25,6 +27,7 @@ export async function OverviewCardsGroup() {
   let mistralResponse = getRequest("Remind me to complete a powerpoint presentation for my chemistry course by any date of your choice in december, use only one line and send only that single line.", "mistral")
   let orcaResponse = getRequest("Remind me that I have a cybersecurity coursework due on the 6th of November, send one line and one line only.", "orca")
   let qwenResponse = getRequest("Remind me of the most important task to do today. It is up to you what task I should have, as long as it is reasonable for a chemistry university student. Use one line and one line only.", "qwen")
+
 
   return (
     <div className="grid gap-4 sm:grid-cols-2 sm:gap-6 xl:grid-cols-4 2xl:gap-7.5">
