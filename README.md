@@ -31,7 +31,7 @@ To run the software, first navigate to the `/src/api` folder and run:
 
 Then, return to the main folder and run:
 
-`npm run`
+`npm run dev`
 
 The app should now be running on `localhost:3000`
 
