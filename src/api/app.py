@@ -1,5 +1,5 @@
 from flask import Flask, jsonify, request
-import llama_2_func , mistral_func, TaskAI, qrca_2_func, qwen_2_func, llava_func
+import llama_2_func , mistral_func, executor, qrca_2_func, qwen_2_func, llava_func
 
 
 app = Flask(__name__)
@@ -40,11 +40,15 @@ def getQwen():
     data = qwen_2_func.Qwen_2_mes(mes)
     return jsonify({'data': data})
 
-@app.route('/api/task', methods = ['GET'])
-def getTask():
-    mes = request.args.get('input')
-    data = TaskAI.TaskAI(mes)
-    return jsonify({'data': data})
+@app.route('/api/task', methods=['POST'])
+def runTask():
+
+    data = request.json
+    user_input = data.get("input")
+
+    result = executor.execute_task(user_input)
+
+    return jsonify(result)
 
 
 # driver function
