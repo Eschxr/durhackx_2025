@@ -1,38 +1,186 @@
-# Durhack X 2025
+# 🧠 I/We — Your AI Team When You're Working Alone  
+**DurHack 2025 Project**
 
-Our project for Durhack 2025.
+> *You may be working alone, but you never have to feel alone.*
 
-## I/We
+I/We provides an **on-demand team of AI agents** that collaborate with you on tasks such as brainstorming, coding help, planning, and problem solving. Instead of interacting with a single chatbot, I/We gives you a **panel of specialised AI assistants** that can reason together and support your workflow.
 
-#### Tired of working alone? I/We provides you with an on-demand team of AI agents ready to offer you help and support on nearly any task you want! With I/We, you may be alone, but you are never lonely. 
+---
 
-## Usage
+# 🚀 Features
 
-Clone the repo, then, within the repository, run: 
+- 🤖 **Multi-Agent AI System**  
+  Multiple AI models work together to provide diverse perspectives and solutions.
 
-`pip install -r requirements.txt`
+- 🧠 **Task Assistance**  
+  Get help with:
+  - brainstorming
+  - coding
+  - planning
+  - research
+  - problem solving
 
-`npm install`
+- 👥 **Collaborative AI Experience**  
+  The system simulates a **team environment**, making solo work feel more collaborative.
 
-Then, install the required AI models, which you do with: 
+- ⚡ **Local AI Models via Ollama**  
+  All models run locally using Ollama for privacy and fast inference.
 
-`ollama pull {name_of_AI}`
+---
 
-The models used in this software are: 
-* Llama 2 (llama2)
-* Llava Latest (llava:latest)
-* Mistral (mistral)
-* Orca 2 (orca2)
-* Qwen 2.5 (qwen2.5)
+# 🏗️ System Architecture
 
-To run the developer deployment environment, first navigate to the `/src/api` folder and run:
+The system consists of three main components:
 
-`flask run --debug`
+### 1️⃣ Frontend
+- Built with **Node.js / React**
+- Provides the interactive UI where users interact with the AI team.
 
-Then, return to the main folder and run:
+### 2️⃣ Backend API
+- Built with **Flask**
+- Handles agent orchestration, request routing, and model interaction.
 
-`npm run dev`
+### 3️⃣ AI Model Layer
+Models are served locally using **Ollama**, enabling multiple AI agents to participate in the conversation.
 
-The app should now be running on `localhost:3000`
+---
 
-Enjoy!
+# 🛠️ Tech Stack
+
+**Frontend**
+- Node.js
+- React
+- NPM
+
+**Backend**
+- Python
+- Flask
+
+**AI Infrastructure**
+- Ollama
+- LLMs
+
+**Models Used**
+- Llama 2
+- Llava
+- Mistral
+- Orca 2
+- Qwen 2.5
+
+---
+
+# ⚙️ Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/your-repo-name.git
+cd your-repo-name
+```
+
+Install Python dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+Install frontend dependencies:
+
+```bash
+npm install
+```
+
+---
+
+# 🧠 Install AI Models
+
+Install the required models using Ollama:
+
+```bash
+ollama pull llama2
+ollama pull llava:latest
+ollama pull mistral
+ollama pull orca2
+ollama pull qwen2.5
+```
+
+---
+
+# ▶️ Running the Project
+
+### Start the backend API
+
+Navigate to the API directory:
+
+```bash
+cd src/api
+```
+
+Run the Flask development server:
+
+```bash
+flask run --debug
+```
+
+---
+
+### Start the frontend
+
+Return to the root directory:
+
+```bash
+npm run dev
+```
+
+---
+
+### Open the app
+
+The application will be available at:
+
+```
+http://localhost:3000
+```
+
+---
+
+# 📂 Project Structure
+
+```
+project-root
+│
+├── src
+│   ├── api        # Flask backend
+│   ├── frontend   # React frontend
+│
+├── requirements.txt
+├── package.json
+└── README.md
+```
+
+---
+
+# 👥 Team
+
+Built during **DurHack 2025**.
+
+Team members:
+- Member 1
+- Member 2
+- Member 3
+- Member 4
+
+---
+
+# 🔮 Future Improvements
+
+- Better agent coordination strategies  
+- Persistent memory between conversations  
+- Task-specific specialist agents  
+- Cloud deployment support  
+
+---
+
+# 🏁 Acknowledgements
+
+Thanks to **DurHack 2025** for hosting an amazing hackathon and enabling us to build innovative AI tools.
