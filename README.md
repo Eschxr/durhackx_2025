@@ -1,4 +1,4 @@
-# 🧠 I/We — Your AI Team When You're Working Alone  
+# I/We — Your AI Team When You're Working Alone  
 **DurHack 2025 Project**
 
 > *You may be working alone, but you never have to feel alone.*
@@ -7,50 +7,50 @@ I/We provides an **on-demand team of AI agents** that collaborate with you on ta
 
 ---
 
-# 🚀 Features
+# Features
 
-- 🤖 **Multi-Agent AI System**  
+- **Multi-Agent AI System**  
   Multiple AI models work together to provide diverse perspectives and solutions.
 
-- 🧠 **Task Assistance**  
+- **Task Assistance**  
   Get help with:
   - brainstorming
   - coding
   - planning
   - research
-  - problem solving
+  - documents/reports
+  - presentations
 
-- 👥 **Collaborative AI Experience**  
+- **Collaborative AI Experience**  
   The system simulates a **team environment**, making solo work feel more collaborative.
 
-- ⚡ **Local AI Models via Ollama**  
-  All models run locally using Ollama for privacy and fast inference.
+- **Local AI Models via Ollama**  
+  All models run locally using Ollama for privacy.
 
 ---
 
-# 🏗️ System Architecture
+# System Architecture
 
 The system consists of three main components:
 
-### 1️⃣ Frontend
-- Built with **Node.js / React**
+### Frontend
+- Built with **React** using a Next.js template
 - Provides the interactive UI where users interact with the AI team.
 
-### 2️⃣ Backend API
-- Built with **Flask**
+### Backend API
+- A simple (in hindsight, rather poorly designed) REST API built with **Flask**
 - Handles agent orchestration, request routing, and model interaction.
 
-### 3️⃣ AI Model Layer
-Models are served locally using **Ollama**, enabling multiple AI agents to participate in the conversation.
+### AI Model Layer
+Models are served locally using **Ollama**.
 
 ---
 
-# 🛠️ Tech Stack
+# Tech Stack
 
 **Frontend**
 - Node.js
 - React
-- NPM
 
 **Backend**
 - Python
@@ -58,7 +58,6 @@ Models are served locally using **Ollama**, enabling multiple AI agents to parti
 
 **AI Infrastructure**
 - Ollama
-- LLMs
 
 **Models Used**
 - Llama 2
@@ -69,13 +68,13 @@ Models are served locally using **Ollama**, enabling multiple AI agents to parti
 
 ---
 
-# ⚙️ Installation
+# Installation
 
 Clone the repository:
 
 ```bash
-git clone https://github.com/your-repo-name.git
-cd your-repo-name
+git clone https://github.com/Eschxr/durhackx_2025.git
+cd durhackx_2025
 ```
 
 Install Python dependencies:
@@ -92,7 +91,7 @@ npm install
 
 ---
 
-# 🧠 Install AI Models
+# Install AI Models
 
 Install the required models using Ollama:
 
@@ -106,7 +105,7 @@ ollama pull qwen2.5
 
 ---
 
-# ▶️ Running the Project
+# Running the Project
 
 ### Start the backend API
 
@@ -144,7 +143,7 @@ http://localhost:3000
 
 ---
 
-# 📂 Project Structure
+# Project Structure
 
 ```
 project-root
@@ -160,27 +159,30 @@ project-root
 
 ---
 
-# 👥 Team
+# Team
 
 Built during **DurHack 2025**.
 
 Team members:
-- Member 1
-- Member 2
-- Member 3
-- Member 4
+- Sam
+- Andy
+- Himmy
+- Tam
 
 ---
 
-# 🔮 Future Improvements
+# Future Improvements
 
-- Better agent coordination strategies  
-- Persistent memory between conversations  
+- Repository cleanup/major code refactoring, since we now can do a lot better than ~9 months ago
+- Proper technical writeups
+- Better agent coordination strategies
+- Proper agent tooling for document interaction 
+- Persistent memory between conversations/data persistence in general
 - Task-specific specialist agents  
-- Cloud deployment support  
+- Cloud deployment support
 
 ---
 
-# 🏁 Acknowledgements
+# Acknowledgements
 
 Thanks to **DurHack 2025** for hosting an amazing hackathon and enabling us to build innovative AI tools.
